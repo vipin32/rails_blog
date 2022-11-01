@@ -1,8 +1,19 @@
-<h1>Rails Blog</h1>
+<h1 class="title">Rails Blog</h1>
 
+<section class="section">
+    <div class="container">
+        <% @posts.each do |post| %>
+            <div class="card">
+                <div class="card-content">
+                    <div class="media-content">
+                        <p class="title is-4"><%= link_to post.title, post %></p>
+                    </div>
 
-<% @posts.each do |post| %>
-
-    <h1><%= post.title %></h1>
-
-<% end %>
+                    <div class="content">
+                        <%= post.content %>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>
