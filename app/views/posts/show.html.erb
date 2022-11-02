@@ -2,6 +2,26 @@
 
 <section class="section">
     <div class="container">
+        <div class="level">
+            <!--Left Side -->
+            <div class="level-left">
+                <div class="level-item">
+                    <strong>Actions</strong>
+                </div>
+            </div>
+
+            <!--Right Side -->
+            <div class="level-right">
+                <div class="level-item">
+                    <%= link_to "Edit", edit_post_path(@post), class: "button" %>
+                </div>
+
+                <div class="level-item">
+                    <%= button_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure you want to delete ?"}, class: "button is-danger" %>
+                </div>
+            </div>
+        </div>
+
         <div class="content">
             <%= @post.content %>
         </div>    
